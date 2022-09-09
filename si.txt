@@ -1,0 +1,9 @@
+
+
+para subir un archvio tenemos que estar en nuestra rama
+git status // para ver los archivos
+git add .// para agregar el archivo
+gti commit"comentario"//siempre se debe agregar comentario
+git checkout develop // para cambiar a la rama debelop
+git merge "rama propia" //para convinar
+git push orign develop // se sube a la rama develop
