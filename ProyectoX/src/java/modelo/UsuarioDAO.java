@@ -11,16 +11,16 @@ public class UsuarioDAO {
         PreparedStatement ps;
         ResultSet rs;
         
-        public Usuario validar(String nombre, String idUsuario){
+        public Usuario validar(String nombre, String clave){
             //instancimos un objeto de la entidad usuario
             Usuario usuario = new Usuario();
             //Agregar una variable de tipo String para que muestre nuestra consulta SQL
             //Select * from Usuario where usuario = "" and DPIEmpleado = "";
-            String sql = "select * from Usuario where usuario = ? and clave = ?";
+            String sql = "select * from Usuario where nombre = ? and clave = ?";
             try{
                 con = cn.Conexion();
                 ps = con.prepareStatement(sql);
-                ps.setString(1, usuario);
+                ps.setString(1, nombre);
                 ps.setString(2, clave);
                 rs = ps.executeQuery();
                 while(rs.next()){
@@ -33,6 +33,6 @@ public class UsuarioDAO {
                 e.printStackTrace();
             }
         
-        return usuario;         //empleado encontrado
+        return usuario;         //usuario encontrado
     }
 }

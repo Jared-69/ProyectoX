@@ -13,16 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelo.Usuario;
 import modelo.UsuarioDAO;
-
 /**
  *
  * @author edgar 
  */
 public class validar extends HttpServlet {
-    
-    UsuarioDAO usuario = new Usuario();
+    UsuarioDAO usuarioDAO = new UsuarioDAO(); 
     Usuario usuario = new Usuario();
-
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -82,18 +80,22 @@ public class validar extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String accion = request.getParameter("accion");
+        if(accion.equalsIgnoreCase("Ingresar")){
         
                 String user = request.getParameter("txtUser");
                 String pass = request.getParameter("txtPass");
-                usuario = usuarioDAO.(user, pass);
-                if(usuario.getUsuario() != null){
-                request.setAttribute("usuario", usuario);
-                request.getRequestDispatcher("Controlador?menu=Cliente");
+                usuario = usuarioDAO.validar(user, pass);
+                if(usuario.getNombre()!= null){
+                request.setAttribute("nombre", usuario);
+                request.getRequestDispatcher("Controlador?menu=Usuario");
             }else{
                 request.getRequestDispatcher("index.jsp").forward(request, response);
                 }
-              }else{
-                request.getRequestDispatcher("index.jsp").forward(request, response);
+              }
+              else{
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+                
             }
             
         }
