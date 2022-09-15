@@ -10,8 +10,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link href="css/index.css" rel="stylesheet" type="text/css"/>
         <title>ProyectoX</title>
     </head>
     <body>
@@ -26,13 +28,13 @@
                         </div>
                             <div class="form-group">
                                 <label>Usuario</label>
-                                <input type="text" name="txtUser" class="form-control">
+                                <input type="text" name="txtUser" class="form-control-login">
                             </div>
                         <div class="form-group">
                             <label>Contraseña</label>
-                            <input type="password" name="txtPass" class="form-control">
+                            <input type="password" name="txtPass" class="form-control-login">
                         </div>
-                            <input type="submit" name="accion" value="Ingresar" class="btn btn-primary btn-block">
+                            <input type="submit" name="accion" value="Ingresar" class="btn btn-login btn-block">
                         </form> 
                   </div>
             </div>
