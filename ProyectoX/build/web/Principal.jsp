@@ -32,11 +32,24 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="Controlador?menu=Empleado&accion=Listar" target="myFrame">Carrito de Compras</a>
-                        </li>
-                                           
+                        </li>                                           
                     </ul>
                 </div>
-                
+                    <div class="nav-item dropdown" id="Drop" >
+                    <a class="nav-link dropdown-toggle text-dark " data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                        ${usuario.getNombresEmpleado()}</a>
+                    <ul class="dropdown-menu  text-center">
+                        <a class="dropdown-item" href="#">
+                            <img src="img/usuatio.png" alt="" width="60"/>
+                        </a>
+                        <a class="dropdown-item" href="#">${usuario.getUsuario()}</a>
+                        <a class="dropdown-item" href="#">usuario@gmail.com</a>
+                        <div class="dropdown-divider"></div>
+                        <form action="Validar" method="POST">
+                            <button name="accion" value="Salir" class="dropdown-item bg-danger" href="#">Salir</button>
+                        </form>
+                    </ul>
+                </div>               
             </div>
           </nav>
         <div class="m-4"  id="Frame">
