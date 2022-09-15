@@ -65,13 +65,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </div>\r\n");
       out.write("                            <div class=\"form-group\">\r\n");
       out.write("                                <label>Usuario</label>\r\n");
-      out.write("                                <input type=\"text\" name=\"txtUser\" class=\"form-control\">\r\n");
+      out.write("                                <input type=\"text\" name=\"txtUser\" class=\"form-control-login\">\r\n");
       out.write("                            </div>\r\n");
       out.write("                        <div class=\"form-group\">\r\n");
       out.write("                            <label>Contraseña</label>\r\n");
-      out.write("                            <input type=\"password\" name=\"txtPass\" class=\"form-control\">\r\n");
+      out.write("                            <input type=\"password\" name=\"txtPass\" class=\"form-control-login\">\r\n");
       out.write("                        </div>\r\n");
-      out.write("                            <input type=\"submit\" name=\"accion\" value=\"Ingresar\" class=\"btn btn-primary btn-block\">\r\n");
+      out.write("                            <input type=\"submit\" name=\"accion\" value=\"Ingresar\" class=\"btn btn-login btn-block\">\r\n");
       out.write("                        </form> \r\n");
       out.write("                  </div>\r\n");
       out.write("            </div>\r\n");
