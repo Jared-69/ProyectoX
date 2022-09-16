@@ -11,13 +11,16 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import modelo.Usuario;
+import modelo.UsuarioDAO;
 /**
  *
- * @author edson
+ * @author edgar 
  */
 public class validar extends HttpServlet {
-
+    UsuarioDAO usuarioDAO = new UsuarioDAO(); 
+    Usuario usuario = new Usuario();
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -56,7 +59,14 @@ public class validar extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+            
+                //capturar la petición del usuario
+                String accion = request.getParameter("accion");
+                if (accion.equalsIgnoreCase("Ingresar")){
+                    //capturar el usuario y la contraseña 
+                    String user = request.getParameter("txtUser");
+                    String pass = request.getParameter("txtPass");
+                }
     }
 
     /**
@@ -70,8 +80,25 @@ public class validar extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-    }
+        String accion = request.getParameter("accion");
+        if(accion.equalsIgnoreCase("Ingresar")){
+        
+                String user = request.getParameter("txtUser");
+                String pass = request.getParameter("txtPass");
+                usuario = usuarioDAO.validar(user, pass);
+                if(usuario.getNombre()!= null){
+                request.setAttribute("nombre", usuario);
+                request.getRequestDispatcher("Controlador?menu=Usuario");
+            }else{
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+                }
+              }
+              else{
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+                
+            }
+            
+        }
 
     /**
      * Returns a short description of the servlet.
@@ -81,6 +108,5 @@ public class validar extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
-
+    }
 }
