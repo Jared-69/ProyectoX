@@ -18,7 +18,11 @@ public class UsuarioDAO {
             //Select * from Usuario where usuario = "" and DPIEmpleado = "";
             String sql = "select * from Usuario where nombre = ? and clave = ?";
             try{
+<<<<<<< HEAD
                 con = cn.Conexion();
+=======
+                con = cn.getConnection();
+>>>>>>> jrodas-2021418
                 ps = con.prepareStatement(sql);
                 ps.setString(1, nombre);
                 ps.setString(2, clave);
