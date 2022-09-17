@@ -1,0 +1,128 @@
+*{
+    font-family: Lucida Bright;
+    font-weight: 900;
+}
+
+body{
+     background: url(../img/fondo_login.jpg);
+}
+
+.fondoTitulo{
+    background: url(../img/fondo_titulo_login.jpeg);
+    background-size: cover;
+    border-radius: 0.25rem;
+    color: white;
+}
+
+.card{
+    box-shadow: 0 4px 8px   #056052;
+    
+}
+
+.form-control-login {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color:  gray;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control-login {
+    transition: none;
+  }
+}
+
+.form-control-login::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.form-control-login:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #04cbae;
+}
+
+.form-control-login:focus {
+  color:  gray ;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #04cbae;
+}
+
+.form-control-login::-webkit-input-placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+.form-control-login::-moz-placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+.form-control-login:-ms-input-placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+.form-control-login::-ms-input-placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+.form-control-login::placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+.form-control-login:disabled, .form-control-login[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+.btn-login {
+  color: #fff;
+  background-color:  #228a7d;
+  border-color:  #056052;
+}
+
+.btn-login:hover {
+  color: black;
+  background-color:  transparent;
+  border-color:  #228a7d;
+  box-shadow: 0 0 4px 0.1rem  #0de1c6 ;
+}
+
+.btn-login:focus, .btn-login.focus {
+  color: #fff;
+  background-color:  #228a7d;
+  border-color:  #056052;
+  box-shadow: 0 0 0 0.2rem   #0de1c6 ;
+}
+
+.btn-login.disabled, .btn-login:disabled {
+  color: #fff;
+  background-color:  #228a7d;
+  border-color:  #056052;
+}
+
+.btn-login:not(:disabled):not(.disabled):active, .btn-login:not(:disabled):not(.disabled).active,
+.show > .btn-login.dropdown-toggle {
+  color: #fff;
+  background-color:  #228a7d;
+  border-color:  #056052;
+}
+
+.btn-login:not(:disabled):not(.disabled):active:focus, .btn-login:not(:disabled):not(.disabled).active:focus,
+.show > .btn-login.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem   #0de1c6;
+}
