@@ -19,6 +19,7 @@ Create table Categoria(
   primary key PK_idCategoria (idCategoria)
 );
 
+<<<<<<< HEAD
 select * from Categoria;
 
 insert into Categoria (nombre, descripcion)
@@ -35,6 +36,8 @@ values("Bebidas Gaseosas", "Refrescos");
 
 
 
+=======
+>>>>>>> dmorales-2021420
 Create table Articulo(
   idArticulo int not null auto_increment,
   idCategoria int not null,
@@ -42,10 +45,15 @@ Create table Articulo(
   precio_venta decimal(11,2) not null ,
   stock int not null,
   descripcion varchar(225) not null,
+<<<<<<< HEAD
+=======
+  imagen longblob null,
+>>>>>>> dmorales-2021420
   primary key PK_idArticulo(idArticulo),
   constraint FK_Categoria_Articulo foreign key(idCategoria) references Categoria(idCategoria)
     );
 
+<<<<<<< HEAD
 select * from Articulo;
 
 insert into Articulo (idCategoria, nombre, precio_venta, stock, descripcion)
@@ -75,6 +83,8 @@ values(4, "Coca Cola", "30.99", 11,"Bebida Gaseosa");
 insert into Articulo (idCategoria, nombre, precio_venta, stock, descripcion)
 values(4, "Pepsi", "20.99", 30,"Bebida Gaseosa");
 
+=======
+>>>>>>> dmorales-2021420
 Create table Usuario(
   idUsuario int not null auto_increment,
   nombre varchar(100) not null,
@@ -82,6 +92,7 @@ Create table Usuario(
   clave varchar(100)not null,
   primary key PK_idUsuario(idUsuario)
   );
+<<<<<<< HEAD
   
 insert into Usuario (nombre, email, clave)
 	values("egomez", "egomez-20214000@kinal.edu.gt", "SHANDERG001@#");
@@ -89,6 +100,8 @@ insert into Usuario (nombre, email, clave)
 	values("hnavarro", "hnavarro-2017178@kinal.edu.gt", "NAVARROH001@#");
     
 select * from Usuario;
+=======
+>>>>>>> dmorales-2021420
 
 Create table Venta(
   idVenta int not null auto_increment,
@@ -148,6 +161,10 @@ Create table About(
   apellido varchar(45) not null,
   seccion varchar(45) not null,
   primary key PK_Carne(Carnet)
+<<<<<<< HEAD
   );
   
   select * from Usuario where nombre = 'egomez' and clave = 'SHANDERG001@#';
+=======
+  );
+>>>>>>> dmorales-2021420
